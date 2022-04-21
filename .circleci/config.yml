@@ -31,11 +31,16 @@ jobs:
           command: "echo  World!"
 
 # Invoke jobs via workflows
-# See: https://circleci.com/docs/2.0/configuration-reference/#workflows
+# See: https://circleci.com/docs/2.0/configuration-reference/#workf
 workflows:
   say-hello-workflow:
     jobs:
       - say-hello
       - say-world:
+<<<<<<< HEAD
             requires:
                 - say-hello
+=======
+           requires:
+              - say-hello 
+>>>>>>> 5470f90dcd6892c2e88183239acdb2b86bf57141

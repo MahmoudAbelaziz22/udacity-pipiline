@@ -37,10 +37,6 @@ workflows:
     jobs:
       - say-hello
       - say-world:
-<<<<<<< HEAD
             requires:
                 - say-hello
-=======
-           requires:
-              - say-hello 
->>>>>>> 5470f90dcd6892c2e88183239acdb2b86bf57141
+      

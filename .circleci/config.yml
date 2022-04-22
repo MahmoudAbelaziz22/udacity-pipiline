@@ -12,9 +12,20 @@ jobs:
     steps:
       - checkout
       - print_pipeline_id
+  faile_job:
+    docker:
+      - image: circleci/node:13.8.0
+    steps:
+      - checkout
+      - run: exit 1
+      - run:
+         command: echo failllllled
+         when: on_fail
+
 
 workflows:
   say-hello-workflow:
     jobs:
       - print_pipeline
+      - faile_job
       

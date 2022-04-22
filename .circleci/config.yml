@@ -17,5 +17,5 @@ jobs:
 workflows:
   say-hello-workflow:
     jobs:
-      - print_pipeline
+      - print_pipeline_id
       

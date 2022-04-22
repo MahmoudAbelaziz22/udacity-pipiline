@@ -11,7 +11,7 @@ jobs:
           name: "save file"
           command: echo "text to output here" > output.txt
       - persist_to_workspace:
-          root: ~/
+          root: /home/circleci
           paths:
             - output.txt
 
@@ -21,7 +21,7 @@ jobs:
     steps:
       - checkout
       - attach_workspace:
-          at: ~/
+          at: /home/circleci
       - run: cat ~/output.txt
 
 workflows:
